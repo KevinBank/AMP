@@ -13,7 +13,7 @@ let maxPoints = 10;
 for (let i = 0; i < maxPoints; i++)
 {
   let A = new Point(new Vector2d(getRandomNumber(width), getRandomNumber(height)), 100, "red");
-  balls.push(ball);
+  balls.push(A);
 }
 
 // let A = new Point(new Vector2d(200,200),100,"red");
