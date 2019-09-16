@@ -10,6 +10,7 @@ canvas.height = height;
 let points = [];
 let counter = 0;
 
+// de groeten
 
 function animate()
 {
