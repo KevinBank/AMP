@@ -7,9 +7,7 @@ const height = window.innerHeight;
 canvas.width = width;
 canvas.height = height;
 
-let f = new LinearFunction(0,0);
-
-
+let f = new LinearFunction(1,1);
 
 let A = new Point(new Vector2d(200,200),10,"blue");
 let B = new Point(new Vector2d(500,300),10,"red");
