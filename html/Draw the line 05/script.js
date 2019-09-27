@@ -7,17 +7,18 @@ const height = window.innerHeight;
 canvas.width = width;
 canvas.height = height;
 
-let f = new linearFunction(2,3);
+let f = new LinearFunction(0,0);
 
-console.log(f);
 
-console.log(f.y(10));
 
-for(let x = 0; x = < 100; x += 10)
-{
-  let point = new Point(new Vector2d(x, f.y(x)),10,"green");
-  console.log(x, f.y(x));
+let A = new Point(new Vector2d(200,200),10,"blue");
+let B = new Point(new Vector2d(500,300),10,"red");
+
+A.draw(context); B.draw(context);
+
+f.defineLineWithTwoPoints(A,B);
+
+for(let x = 0; x < width ; x+= 10){
+  let point = new Point(new Vector2d(x, f.y(x)),5,"yellow");
+  point.draw(context);
 }
-
-let A = new Point(new Vector2d(200,200), 10,"blue");
-let B = new Point(new Vector2d(500,300), 10,"red");
