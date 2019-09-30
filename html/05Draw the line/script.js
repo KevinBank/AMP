@@ -15,6 +15,7 @@ let B = new Point(new Vector2d(500,300),10,"red");
 function animate()
 {
   requestAnimationFrame(animate);
+
   A.draw(context); B.draw(context);
 
   let f = new LinearFunction(0,0);
