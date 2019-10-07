@@ -7,37 +7,25 @@ const height = window.innerHeight;
 canvas.width = width;
 canvas.height = height;
 
-let points = [];
-let counter = 0;
+let A = new Point(new Vector2d(200,300),25,"pink","A",true);
+let B = new Point(new Vector2d(300,200),25,"pink","A",true);
+let C = new Point(new Vector2d(300,300),25,"pink","A",true);
 
-// de groeten
 
 function animate()
 {
   context.clearRect(0,0,width,height);
   requestAnimationFrame(animate);
-  let color = "rgba(" + getRandom(255) + "," + getRandom(255) + "," + getRandom(255) + "," + 1 + ")"
-  let A = new Point(new Vector2d(getRandom(width),getRandom(height)),10,color,"hallos");
-  A.label = counter;
-  counter++;
-  points.push(A);
 
-  for(let i = 0; i<points.length; i++)
-  {
-    points[i].radius+= 7.5;
-    points[i].draw(context);
-    if(points[i].radius > 500)
-    {
-      points.splice(i,1);
-    }
-  }
+  A.draw(context);
+  B.draw(context);
+  C.draw(context);
 }
 
 animate()
 
-
-function getRandom(max)
-{
-  let ans = Math.floor(Math.random()*max);
-  return ans;
-}
+// function getRandom(max)
+// {
+//   let ans = Math.floor(Math.random()*max);
+//   return ans;
+// }
