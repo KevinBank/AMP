@@ -7,9 +7,9 @@ const height = window.innerHeight;
 canvas.width = width;
 canvas.height = height;
 
-let A = new Point(new Vector2d(200,500),25,"purple","A",true);
-let B = new Point(new Vector2d(600,200),25,"purple","A",true);
-let C = new Point(new Vector2d(500,500),25,"purple","A",true);
+let A = new Point(new Vector2d(getRandom(canvas.width),getRandom(canvas.height)),25,"purple","A",true);
+let B = new Point(new Vector2d(getRandom(canvas.width),getRandom(canvas.height)),25,"purple","A",true);
+let C = new Point(new Vector2d(getRandom(canvas.width),getRandom(canvas.height)),25,"purple","A",true);
 
 let ABm = new Point(new Vector2d(0,0),15,"white","A",false);
 let BCm = new Point(new Vector2d(0,0),15,"white","A",false);
@@ -60,8 +60,8 @@ function animate()
 
 animate()
 
-// function getRandom(max)
-// {
-//   let ans = Math.floor(Math.random()*max);
-//   return ans;
-// }
+function getRandom(max)
+{
+  let ans = Math.floor(Math.random()*max);
+  return ans;
+}
