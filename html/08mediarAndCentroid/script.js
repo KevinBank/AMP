@@ -15,6 +15,8 @@ let ABm = new Point(new Vector2d(0,0),15,"white","A",false);
 let BCm = new Point(new Vector2d(0,0),15,"white","A",false);
 let CAm = new Point(new Vector2d(0,0),15,"white","A",false);
 
+let Center = new Point(new Vector2d(0,0),15,"white","A",false);
+
 let lab = new LinearFunction(1,1);
 let lbc = new LinearFunction(1,1);
 let lca = new LinearFunction(1,1);
@@ -48,6 +50,8 @@ function animate()
   BCm.position.dy = (B.position.dy + C.position.dy)/2;
   CAm.position.dx = (C.position.dx + A.position.dx)/2;
   CAm.position.dy = (C.position.dy + A.position.dy)/2;
+  Center.position.dx = (A.position.dx + CAm.position.dx)/2;
+  Center.position.dy = (A.position.dy + CAm.position.dy)/2;
 
   A.draw(context);
   B.draw(context);
