@@ -10,7 +10,7 @@ canvas.height = height;
 let arrows = [];
 
 let row = 20;
-let number = 100;
+let number = 250;
 
 let dx,dy,distance;
 
